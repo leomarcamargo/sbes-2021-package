@@ -2,67 +2,113 @@
 
 <head>
     <title>Survey</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style type="text/css">
-        body{
-            padding: 35px;
-        }
-
-        fieldset{
+        fieldset {
             margin: 10px;
         }
 
-        fieldset legend{
+        fieldset legend {
             text-align: justify;
             font-weight: bold;
         }
 
-        fieldset h2{
+        fieldset h2 {
             text-align: center;
             margin-bottom: 1.5em;
             text-transform: uppercase;
         }
 
-        input, textarea{
+        input,
+        textarea {
             display: none;
+        }
+
+        .page-header {
+            color: #fff;
+            text-align: center;
+            background-color: #159957;
+            background-image: linear-gradient(120deg, #155799, #159957);
+            padding: 1.5rem 2rem;
         }
     </style>
 </head>
+
 <body>
-     <div class="row">
-        <div class="col-md-12">
-            <h2 class="text-center text-uppercase">
-                Extracting and evolving delta-oriented product lines
-             </h2>
-             <p class="text-center">
-                LEOMAR CAMARGO, RODRIGO BONIFÁCIO, LEOPOLDO TEIXEIRA, KARINE GOMES, GABRIEL LOBÃO, LUISA FANTIN AND THIAGO FIGUEIREDO
-             </p>
+    <div class="container-fluid page-header">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center text-uppercase">
+                    Extracting and evolving delta-oriented product lines: An Experience Report
+                </h2>
+                <p class="text-center">
+                    LEOMAR CAMARGO, KARINE GOMES, LEOPOLDO TEIXEIRA, GABRIEL LOBÃO, LUISA FANTIN, THIAGO FIGUEIREDO,
+                    RODRIGO
+                    BONIFÁCIO
+                </p>
+            </div>
         </div>
-     </div>
+    </div>
 
-     <hr />
-
-     <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-uppercase">
-                Reminder-PL
-            </h3>
-            <p class="font-weight-bold">Feature-Model: </p>
-            <img src="img/reminder-fm-new.jpg" class="img-fluid mx-auto d-block"/>
-            <strong>GitHub:</strong> <a href="https://github.com/Reminder-App/reminder-dop">https://github.com/Reminder-App/reminder-dop</a>
+    <div class="row p-4">
+        <div class="col-md-12 text-justify">
+            <h3 class="text-center">Abstract</h3>
+            Software product line engineering is a well-known approach
+            for building a set of configurable systems for a specific domain,
+            and different techniques have been used to manage
+            product line variability, including source-code preprocessing,
+            aspect-oriented programming (AOP), and delta-oriented programming
+            (DOP). Although existing studies have explored
+            the design and evolution of product lines using techniques
+            such as source-code preprocessing and AOP, little is known
+            about the practical implications of using DOP to bootstrap
+            and evolve software product lines. In this paper we address
+            this issue, reporting our experience of using DeltaJ to implement
+            two product lines (Reminder-PL and Iris-PL). This
+            experience covers different scenarios of evolution (such as
+            the inclusion of mandatory, optional, and alternative features)
+            that indeed led to several feature interactions. Altogether,
+            this work brings several contributions, including
+            evidence that existing templates for safe and partially safe
+            evolution of product lines can also help developers to evolve
+            delta-oriented SPLs—although we revealed the need for two
+            additional templates for safe evolution. Also, we present a
+            description of the feature interactions that appeared during
+            the evolution of both product lines and how we modularized
+            these interactions using DOP constructs. We believe
+            that our report and SPL implementations might contribute
+            to researchers and practitioners interested in using DOP to
+            implement product lines.
         </div>
-     </div>
+    </div>
 
-     <div class="row mt-5">
+    <div class="row p-4">
         <div class="col-md-12">
-            <h3 class="text-uppercase">
-                Iris-PL
-            </h3>
-            <p class="font-weight-bold">Feature-Model: </p>
-            <img src="img/iris-fm-new.jpg" class="img-fluid mx-auto d-block"/>
+            <h3 class="text-center">Case Studies</h3>
+            <h5 class="font-weight-bold">Reminder-PL: </h5>
+           <figure>
+            <img src="img/reminder-fm-new.jpg" class="img-fluid mx-auto d-block" alt="Reminder-PL feature-model" title="Reminder-PL feature-model"/>
+            <figcaption class="text-center font-italic">
+                Reminder-PL feature-model. The red numbers represent the release in which the feature was implemented.
+            </figcaption>
+           </figure>
+            <strong>GitHub project:</strong> <a
+                href="https://github.com/Reminder-App/reminder-dop">https://github.com/Reminder-App/reminder-dop</a>
         </div>
-     </div>
-
+    </div>
+    <div class="row p-4">
+        <div class="col-md-12">
+            <h5 class="font-weight-bold">Iris-PL: </h5>
+           <figure>
+            <img src="img/iris-fm-new.jpg" class="img-fluid mx-auto d-block" alt="Iris-PL feature-model" title="Iris-PL feature-model"/>
+            <figcaption class="text-center font-italic">
+                Iris-PL feature-model. The red numbers represent the release in which the feature was implemented.
+            </figcaption>
+           </figure>
+            <strong>GitHub project:</strong> <a href="https://github.com/iris-email-client/iris-delta-programming">https://github.com/iris-email-client/iris-delta-programming</a>
+        </div>
+    </div>
 </body>
 
 </html>
