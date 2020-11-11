@@ -1,0 +1,18 @@
+A1,A1_TYPE,A2,A2_TYPE,DELTA3,RELEASE
+Relational,Alternative,Address Book,Optional,dAddressBookRelational,v0.1.3
+Non Relational,Alternative,Address Book,Optional,dAddressBookLucene,v0.1.3
+Relational,Alternative,Tagging,Optional,dTagRelational,v0.1.3
+Relational,Alternative,Category,Optional,dCategoryRelational,v0.1.3
+Non Relational,Alternative,Tagging,Optional,dTagLucene,v0.1.3
+Relational,Alternative,Address Book,Optional,dAddressBookRelational,v0.1.2
+Non Relational,Alternative,Address Book,Optional,dAddressBookLucene,v0.1.2
+Relational,Alternative,Tagging,Optional,dTagRelational,v0.1.2
+Non Relational,Alternative,Tagging,Optional,dTagLucene,v0.1.2
+Relational,Alternative,Address Book,Optional,dAddressBookRelational,v0.1.1
+Non Relational,Alternative,Address Book,Optional,dAddressBookLucene,v0.1.1
+Relational,Alternative,Tagging,Optional,dTagRelational,v0.1.1
+Non Relational,Alternative,Tagging,Optional,dTagLucene,v0.1.1
+Relational,Alternative,Address Book,Optional,dAddressBookRelational,v0.1.0
+Non Relational,Alternative,Address Book,Optional,dAddressBookLucene,v0.1.0
+Relational,Alternative,Tagging,Optional,dTagRelational,v0.1.0
+Non Relational,Alternative,Tagging,Optional,dTagLucene,v0.1.0

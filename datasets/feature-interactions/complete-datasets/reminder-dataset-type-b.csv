@@ -1,0 +1,10 @@
+A1,A1_TYPE,A2,A2_TYPE,DELTA3,RELEASE
+Reminder Priority,Optional,Manage Category,Optional,dStaticCategoryPriorityGUI,v4
+Reminder Priority,Optional,Static Category,Optional,dManageCategoryPriorityGUI,v4
+Date Range,Alternative,Google Calendar,Optional,dGoogleCalendarDateRangeCalendar,v4
+Date Range,Alternative,Search,Optional,dSearchDateRangeGUI,v4
+Date Repeat,Alternative,Search,Optional,dSearchDateRepeatGUI,v4
+Reminder Priority,Optional,Manage Category,Optional,dStaticCategoryPriorityGUI,v3
+Reminder Priority,Optional,Static Category,Optional,dManageCategoryPriorityGUI,v3
+Date Range,Alternative,Search,Optional,dSearchDateRangeGUI,v3
+Date Range,Alternative,Google Calendar,Optional,dGoogleCalendarDateRangeCalendar,v3

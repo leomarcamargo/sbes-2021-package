@@ -1,0 +1,67 @@
+A1,DELTA1,C1,RELEASE,P3_TYPE
+Category,dCategoryBase,IEmailDAO,v0.1.3,method
+Category,dCategoryBase,SystemFacade,v0.1.3,import
+Category,dCategoryBase,SystemFacade,v0.1.3,method
+Address Book,dAddressBook,EmailClient,v0.1.3,import
+Address Book,dAddressBook,EmailClient,v0.1.3,method
+Address Book,dAddressBookFacade,SystemFacade,v0.1.3,import
+Address Book,dAddressBookFacade,SystemFacade,v0.1.3,method
+Tag,dTagBase,IEmailDAO,v0.1.3,method
+Advanced Search,dAdvancedSearch,EmailDAO,v0.1.3,import
+Advanced Search,dAdvancedSearch,EmailDAO,v0.1.3,method
+Search,dSearchFacade,SystemFacade,v0.1.3,method
+Simple Search,dSimpleSearch,EmailDAO,v0.1.3,import
+Simple Search,dSimpleSearch,EmailDAO,v0.1.3,method
+Security,dSecurityBaseMail,EmailReceiver,v0.1.3,import
+Security,dSecurityBaseMail,EmailReceiver,v0.1.3,method
+Security,dSecurityBaseMail,EmailReceiver,v0.1.3,field
+Security,dSecurityBaseMail,EmailSender,v0.1.3,import
+Security,dSecurityBaseMail,EmailSender,v0.1.3,method
+Security,dSecurityBaseMail,IEmailClient,v0.1.3,import
+Security,dSecurityBaseMail,IEmailClient,v0.1.3,method
+Security,dSecurityBaseMail,EmailClient,v0.1.3,import
+Security,dSecurityBaseMail,EmailClient,v0.1.3,method
+Decrypt,dSecurityDecrypt,EmailReceiver,v0.1.3,method
+Encrypt,dSecurityEncrypt,EmailSender,v0.1.3,import
+Security,dSecurityFacade,SystemFacade,v0.1.3,import
+Security,dSecurityFacade,SystemFacade,v0.1.3,method
+Sign,dSecuritySign,EmailSender,v0.1.3,import
+Verify,dSecurityVerify,EmailReceiver,v0.1.3,method
+Address Book,dAddressBook,EmailClient,v0.1.2,import
+Address Book,dAddressBook,EmailClient,v0.1.2,method
+Address Book,dAddressBookFacade,SystemFacade,v0.1.2,import
+Address Book,dAddressBookFacade,SystemFacade,v0.1.2,method
+Tag,dTagBase,IEmailDAO,v0.1.2,method
+Advanced Search,dAdvancedSearch,IEmailDAO,v0.1.2,import
+Advanced Search,dAdvancedSearch,IEmailDAO,v0.1.2,method
+Search,dSearchFacade,SystemFacade,v0.1.2,method
+Simple Search,dSimpleSearch,IEmailDAO,v0.1.2,import
+Simple Search,dSimpleSearch,IEmailDAO,v0.1.2,method
+Security,dSecurityBaseMail,EmailReceiver,v0.1.2,import
+Security,dSecurityBaseMail,EmailReceiver,v0.1.2,method
+Security,dSecurityBaseMail,EmailReceiver,v0.1.2,field
+Security,dSecurityBaseMail,EmailSender,v0.1.2,import
+Security,dSecurityBaseMail,EmailSender,v0.1.2,method
+Security,dSecurityBaseMail,IEmailClient,v0.1.2,method
+Security,dSecurityBaseMail,EmailClient,v0.1.2,import
+Security,dSecurityBaseMail,EmailClient,v0.1.2,method
+Decrypt,dSecurityDecrypt,EmailReceiver,v0.1.2,method
+Encrypt,dSecurityEncrypt,EmailSender,v0.1.2,import
+Security,dSecurityFacade,SystemFacade,v0.1.2,import
+Security,dSecurityFacade,SystemFacade,v0.1.2,method
+Sign,dSecuritySign,EmailSender,v0.1.2,import
+Verify,dSecurityVerify,EmailReceiver,v0.1.2,method
+Address Book,dAddressBook,EmailClient,v0.1.1,import
+Address Book,dAddressBook,EmailClient,v0.1.1,method
+Address Book,dAddressBookFacade,SystemFacade,v0.1.1,import
+Address Book,dAddressBookFacade,SystemFacade,v0.1.1,method
+Advanced Search,dAdvancedSearch,EmailDAO,v0.1.1,import
+Advanced Search,dAdvancedSearch,EmailDAO,v0.1.1,method
+Search,dSearchFacade,SystemFacade,v0.1.1,method
+Simple Search,dSimpleSearch,EmailDAO,v0.1.1,import
+Simple Search,dSimpleSearch,EmailDAO,v0.1.1,method
+Address Book,dAddressBook,EmailClient,v0.1.0,import
+Address Book,dAddressBook,EmailClient,v0.1.0,method
+Address Book,dAddressBookFacade,SystemFacade,v0.1.0,import
+Address Book,dAddressBookFacade,SystemFacade,v0.1.0,method
+Tag,dTagBase,IEmailDAO,v0.1.0,method

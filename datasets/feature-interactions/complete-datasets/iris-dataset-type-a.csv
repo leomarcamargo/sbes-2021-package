@@ -1,0 +1,41 @@
+A1,A1_TYPE,DELTA1,C1,DELTA2,M1,RELEASE,PATTERN_TYPE,ORIGINAL,MODIFIED_METHOD,ADDED_METHOD,P3_TYPE
+Category,Optional,dCategoryBase,IEmailDAO,dBasePersistence,Persistence,v0.1.3,P3,0,0,1,method
+Category,Optional,dCategoryBase,SystemFacade,dBaseFacade,Services,v0.1.3,"P2, P3",0,1,0,"import, method"
+Address Book,Optional,dAddressBook,EmailClient,dBaseMail,Services,v0.1.3,"P1, P3",1,1,1,"import, method"
+Address Book,Optional,dAddressBookFacade,SystemFacade,dBaseFacade,Services,v0.1.3,P3,0,0,3,"import, method"
+Tag,Optional,dTagBase,IEmailDAO,dBasePersistence,Persistence,v0.1.3,P3,0,0,1,method
+Advanced Search,Alternative,dAdvancedSearch,EmailDAO,dBasePersistence,Persistence,v0.1.3,P3,0,0,1,"import, method"
+Search,Optional,dSearchFacade,SystemFacade,dBaseFacade,Services,v0.1.3,P3,0,0,1,method
+Simple Search,Alternative,dSimpleSearch,EmailDAO,dBasePersistence,Persistence,v0.1.3,P3,0,0,1,"import, method"
+Security,Optional,dSecurityBaseMail,EmailReceiver,dBaseMail,Services,v0.1.3,P3,0,0,7,"import, method, field"
+Security,Optional,dSecurityBaseMail,EmailSender,dBaseMail,Services,v0.1.3,P3,0,0,5,"import, method"
+Security,Optional,dSecurityBaseMail,IEmailClient,dBaseMail,Services,v0.1.3,P3,0,0,1,"import, method"
+Security,Optional,dSecurityBaseMail,EmailClient,dBaseMail,Services,v0.1.3,P3,0,0,1,"import, method"
+Decrypt,Or,dSecurityDecrypt,EmailReceiver,dBaseMail,Services,v0.1.3,"P1, P3",1,1,1,method
+Encrypt,Or,dSecurityEncrypt,EmailSender,dBaseMail,Services,v0.1.3,"P1, P3",1,1,0,import
+Security,Optional,dSecurityFacade,SystemFacade,dBaseFacade,Services,v0.1.3,P3,0,0,1,"import, method"
+Sign,Or,dSecuritySign,EmailSender,dBaseMail,Services,v0.1.3,"P1, P3",1,1,1,import
+Verify,Or,dSecurityVerify,EmailReceiver,dBaseMail,Services,v0.1.3,"P1, P3",2,2,3,method
+Address Book,Optional,dAddressBook,EmailClient,dBaseMail,Services,v0.1.2,"P1, P3",1,1,1,"import, method"
+Address Book,Optional,dAddressBookFacade,SystemFacade,dBaseFacade,Services,v0.1.2,P3,0,0,3,"import, method"
+Tag,Optional,dTagBase,IEmailDAO,dBasePersistence,Persistence,v0.1.2,P3,0,0,1,method
+Advanced Search,Alternative,dAdvancedSearch,IEmailDAO,dBasePersistence,Persistence,v0.1.2,P3,0,0,1,"import, method"
+Search,Optional,dSearchFacade,SystemFacade,dBaseFacade,Services,v0.1.2,P3,0,0,1,method
+Simple Search,Alternative,dSimpleSearch,IEmailDAO,dBasePersistence,Persistence,v0.1.2,P3,0,0,1,"import, method"
+Security,Optional,dSecurityBaseMail,EmailReceiver,dBaseMail,Services,v0.1.2,P3,0,0,7,"import, method, field"
+Security,Optional,dSecurityBaseMail,EmailSender,dBaseMail,Services,v0.1.2,P3,0,0,5,"import, method"
+Security,Optional,dSecurityBaseMail,IEmailClient,dBaseMail,Services,v0.1.2,P3,0,0,1,method
+Security,Optional,dSecurityBaseMail,EmailClient,dBaseMail,Services,v0.1.2,P3,0,0,1,"import, method"
+Decrypt,Or,dSecurityDecrypt,EmailReceiver,dBaseMail,Services,v0.1.2,"P1, P3",1,1,1,method
+Encrypt,Or,dSecurityEncrypt,EmailSender,dBaseMail,Services,v0.1.2,"P1, P3",1,1,0,import
+Security,Optional,dSecurityFacade,SystemFacade,dBaseFacade,Services,v0.1.2,P3,0,0,1,"import, method"
+Sign,Or,dSecuritySign,EmailSender,dBaseMail,Services,v0.1.2,P3,1,1,0,import
+Verify,Or,dSecurityVerify,EmailReceiver,dBaseMail,Services,v0.1.2,P3,2,2,3,method
+Address Book,Optional,dAddressBook,EmailClient,dBaseMail,Services,v0.1.1,"P2, P3",0,1,1,"import, method"
+Address Book,Optional,dAddressBookFacade,SystemFacade,dBaseFacade,Services,v0.1.1,P3,0,0,3,"import, method"
+Advanced Search,Alternative,dAdvancedSearch,EmailDAO,dBasePersistence,Persistence,v0.1.1,P3,0,0,1,"import, method"
+Search,Optional,dSearchFacade,SystemFacade,dBaseFacade,Services,v0.1.1,P3,0,0,1,method
+Simple Search,Alternative,dSimpleSearch,EmailDAO,dBasePersistence,Persistence,v0.1.1,P3,0,0,1,"import, method"
+Address Book,Optional,dAddressBook,EmailClient,dBaseMail,Services,v0.1.0,"P2, P3",0,1,1,"import, method"
+Address Book,Optional,dAddressBookFacade,SystemFacade,dBaseFacade,Services,v0.1.0,P3,0,0,3,"import, method"
+Tag,Optional,dTagBase,IEmailDAO,dBaseMail,Services,v0.1.0,P3,0,0,0,method

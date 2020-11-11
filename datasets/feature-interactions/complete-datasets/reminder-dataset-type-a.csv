@@ -1,0 +1,169 @@
+A1,A1_TYPE,DELTA1,C1,DELTA2,M1,RELEASE,PATTERN_TYPE,ORIGINAL,MODIFIED_METHOD,ADDED_METHOD,P3_TYPE
+Priority,Optional,dPriorityGUI,ReminderFilterArrayAdapter,dGUI,GUI,v4,P2,0,2,0,none
+Priority,Optional,dPriorityGUI,EditReminderActivity,dEditGUI,Edit,v4,"P1, P3",1,1,0,import
+Priority,Optional,dPriorityGUI,ExternalAddReminderActivity,dCreateGUI,Create,v4,"P1, P3",2,2,0,import
+Priority,Optional,dPriorityGUI,ReminderArrayAdapter,dGUI,GUI,v4,"P1, P3",1,1,0,import
+Priority,Optional,dPriorityGUI,ReminderListFragment,dGUI,GUI,v4,"P1, P3",1,2,1,"import, method"
+Priority,Optional,dPriorityGUI,ReminderActivity,dGUI,GUI,v4,"P1, P3",3,3,2,"import, method, field"
+Priority,Optional,dPriorityGUI,ReminderAddActivity,dCreateGUI,Create,v4,"P1, P3",6,6,2,"import, method, field"
+Priority,Optional,dPriorityModel,DBConstants,dModel,Manage Reminder,v4,"P1, P3",1,1,0,field
+Priority,Optional,dPriorityModel,DefaultReminderDAO,dModel,Manage Reminder,v4,"P1, P3",1,1,0,import
+Priority,Optional,dPriorityModel,Reminder,dModel,Manage Reminder,v4,"P1, P3",1,1,2,"field, method"
+Priority,Optional,dPriorityReminder,ReminderMainActivity,dReminder,Manage Reminder,v4,"P2, P3",0,1,0,import
+Google Calendar,Optional,dGoogleCalendarGUI,ReminderActivity,dGUI,GUI,v4,"P1, P3",2,2,0,"import, field"
+Static Category,Alternative,dStaticCategoryController,Controller,dController,Manage Reminder,v4,P3,0,0,5,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,EditReminderActivity,dEditGUI,Edit,v4,"P1, P3",2,2,2,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,AddReminderActivity,dCreateGUI,Create,v4,"P1, P3",1,1,1,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,ExternalAddReminderActivity,dCreateGUI,Create,v4,"P1, P3",2,2,3,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,ReminderListFragment,dGUI,GUI,v4,"P1, P3",1,2,1,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,ReminderActivity,dGUI,GUI,v4,"P1, P3",3,3,4,"import, method, field"
+Static Category,Alternative,dStaticCategoryGUI,ReminderAddActivity,dCreateGUI,Create,v4,"P1, P2, P3",5,6,3,"import, method, field"
+Static Category,Alternative,dStaticCategoryGUI,ReminderFilterArrayAdapter,dGUI,GUI,v4,P2,0,2,0,none
+Static Category,Alternative,dStaticCategoryPersistence,GenericDAO,dPersistence,Manage Reminder,v4,"P2, P3",0,1,0,import
+Static Category,Alternative,dStaticCategoryReminder,ReminderMainActivity,dReminder,Manage Reminder,v4,"P2, P3",0,1,0,import
+Static Category,Alternative,dStaticCategoryModel,DBConstants,dModel,Manage Reminder,v4,"P1, P3",1,1,0,field
+Static Category,Alternative,dStaticCategoryModel,ReminderContentProvider,dModel,Manage Reminder,v4,"P1, P2, P3",1,2,2,"import, method, field"
+Static Category,Alternative,dStaticCategoryModel,DBFactory,dModel,Manage Reminder,v4,P3,0,0,1,method
+Static Category,Alternative,dStaticCategoryModel,Reminder,dModel,Manage Reminder,v4,"P1, P3",1,1,2,"import, method, field"
+Static Category,Alternative,dStaticCategoryModel,ReminderDAO,dModel,Manage Reminder,v4,P3,0,0,1,"import, method"
+Static Category,Alternative,dStaticCategoryModel,DefaultDBFactory,dModel,Manage Reminder,v4,P3,0,0,1,method
+Static Category,Alternative,dStaticCategoryModel,DefaultReminderDAO,dModel,Manage Reminder,v4,"P1, P3",1,1,1,"import, method"
+Static Category,Alternative,dStaticCategoryModel,DBHelper,dModel,Manage Reminder,v4,P2,0,1,0,none
+Search,Optional,dSearchController,ReminderFilter,dController,Manage Reminder,v4,P3,0,0,1,method
+Search,Optional,dSearchGUI,ReminderListFragment,dGUI,GUI,v4,P3,0,0,1,method
+Search,Optional,dSearchReminder,ReminderMainActivity,dReminder,Manage Reminder,v4,"P2, P3",0,1,1,"import, method, field"
+Manage Category,Alternative,dManageCategoryController,Controller,dController,Manage Reminder,v4,P3,0,0,4,method
+Manage Category,Alternative,dManageCategoryGUI,AddReminderActivity,dCreateGUI,Create,v4,P2,0,1,0,none
+Manage Category,Alternative,dManageCategoryGUI,ExternalAddReminderActivity,dCreateGUI,Create,v4,"P1, P2, P3",2,4,1,"field, method"
+Manage Category,Alternative,dManageCategoryGUI,ReminderActivity,dGUI,GUI,v4,P2,0,2,0,none
+Manage Category,Alternative,dManageCategoryGUI,ReminderFilterArrayAdapter,dGUI,GUI,v4,"P2, P3",0,1,1,method
+Manage Category,Alternative,dManageCategoryGUI,EditReminderActivity,dEditGUI,Edit,v4,P2,0,1,0,none
+Manage Category,Alternative,dManageCategoryModel,ReminderContentProvider,dModel,Manage Reminder,v4,P1,1,1,0,none
+Fixed Date,Alternative,dDateRangeFixedDateGUI,ReminderListFragment,dGUI,GUI,v4,P3,0,0,0,import
+Fixed Date,Alternative,dDateRangeFixedDateGUI,ReminderArrayAdapter,dGUI,GUI,v4,P3,0,0,0,field
+Fixed Date,Alternative,dDateRangeFixedDateGUI,ReminderActivity,dGUI,GUI,v4,P1,1,1,0,none
+Fixed Date,Alternative,dDateRangeFixedDateUtil,Patterns,dModel,Manage Reminder,v4,P3,0,0,0,field
+Fixed Date,Alternative,dDateRepeatFixedDateGUI,EditReminderActivity,dEditGUI,Edit,v4,P1,1,1,0,none
+Fixed Date,Alternative,dDateRepeatFixedDateGUI,ReminderAddActivity,dCreateGUI,Create,v4,"P1, P3",4,4,0,field
+Fixed Date,Alternative,dDateRepeatFixedDateGUI,ReminderArrayAdapter,dGUI,GUI,v4,P3,0,0,1,method
+Fixed Date,Alternative,dDateRepeatFixedDateGUI,ReminderActivity,dGUI,GUI,v4,"P1, P3",3,3,4,"field, method"
+Fixed Date,Alternative,dDateRepeatFixedDateGUI,ReminderListFragment,dGUI,GUI,v4,P1,1,1,0,none
+Fixed Date,Alternative,dDateRepeatFixedDateGUI,ExternalAddReminderActivity,dCreateGUI,Create,v4,P1,2,2,0,none
+Fixed Date,Alternative,dDateRepeatFixedDateModel,Reminder,dModel,Manage Reminder,v4,"P1, P3",1,1,2,"import, method, field"
+Fixed Date,Alternative,dDateRepeatFixedDateModel,DBConstants,dModel,Manage Reminder,v4,"P1, P3",1,1,0,field
+Fixed Date,Alternative,dDateRepeatFixedDateModel,ReminderContentProvider,dModel,Manage Reminder,v4,"P1, P3",1,1,1,method
+Fixed Date,Alternative,dDateRepeatFixedDateModel,DefaultReminderDAO,dModel,Manage Reminder,v4,P1,1,1,0,none
+Fixed Date,Alternative,dFixedDateGUI,ExternalAddReminderActivity,dCreateGUI,Create,v4,P1,2,2,0,none
+Fixed Date,Alternative,dFixedDateGUI,ReminderListFragment,dGUI,GUI,v4,"P1, P3",3,3,0,field
+Fixed Date,Alternative,dFixedDateGUI,ReminderActivity,dGUI,GUI,v4,"P1, P2, P3",3,3,4,"field, method"
+Fixed Date,Alternative,dFixedDateGUI,ReminderArrayAdapter,dGUI,GUI,v4,"P1, P2, P3",1,1,2,"field, method"
+Fixed Date,Alternative,dFixedDateGUI,ReminderAddActivity,dCreateGUI,Create,v4,"P1, P3",4,4,0,field
+Fixed Date,Alternative,dFixedDateGUI,EditReminderActivity,dEditGUI,Edit,v4,P1,1,1,0,none
+Fixed Date,Alternative,dFixedDateModel,DBConstants,dModel,Manage Reminder,v4,"P1, P3",1,1,2,field
+Fixed Date,Alternative,dFixedDateModel,ReminderContentProvider,dModel,Manage Reminder,v4,"P1, P3",1,1,1,method
+Fixed Date,Alternative,dFixedDateModel,DefaultReminderDAO,dModel,Manage Reminder,v4,P1,1,1,0,none
+Date Repeat,Alternative,dDateRepeatGUI,ReminderAddActivity,dCreateGUI,Create,v4,"P1, P3",1,1,0,"import, field"
+Date Repeat,Alternative,dDateRepeatGUI,ReminderArrayAdapter,dGUI,GUI,v4,"P1, P3",1,1,1,"field, method"
+Date Repeat,Alternative,dDateRepeatGUI,ReminderListFragment,dGUI,GUI,v4,"P1, P2, P3",1,3,0,field
+Date Repeat,Alternative,dDateRepeatGUI,EditReminderActivity,dEditGUI,Edit,v4,P1,1,1,0,none
+Date Repeat,Alternative,dDateRepeatGUI,ExternalAddReminderActivity,dCreateGUI,Create,v4,P1,2,2,0,none
+Date Repeat,Alternative,dDateRepeatGUI,ReminderActivity,dGUI,GUI,v4,"P1, P3",2,2,0,"import, field"
+Date Repeat,Alternative,dDateRepeatModel,Reminder,dModel,Manage Reminder,v4,"P1, P3",1,1,29,"field, method"
+Date Repeat,Alternative,dDateRepeatModel,DBConstants,dModel,Manage Reminder,v4,"P1, P3",1,1,0,field
+Date Repeat,Alternative,dDateRepeatModel,DefaultReminderDAO,dModel,Manage Reminder,v4,P1,1,1,0,none
+Date Range,Alternative,dDateRangeGUI,ExternalAddReminderActivity,dCreateGUI,Create,v4,P1,2,2,0,none
+Date Range,Alternative,dDateRangeGUI,ReminderListFragment,dGUI,GUI,v4,P1,3,3,0,none
+Date Range,Alternative,dDateRangeGUI,ReminderActivity,dGUI,GUI,v4,"P1, P3",2,2,10,"field, method"
+Date Range,Alternative,dDateRangeGUI,ReminderArrayAdapter,dGUI,GUI,v4,"P1, P3",1,1,3,method
+Date Range,Alternative,dDateRangeGUI,ReminderAddActivity,dCreateGUI,Create,v4,"P1, P3",4,4,0,field
+Date Range,Alternative,dDateRangeGUI,EditReminderActivity,dEditGUI,Edit,v4,P1,1,1,0,none
+Date Range,Alternative,dDateRangeModel,Reminder,dModel,Manage Reminder,v4,"P1, P3",1,1,9,"import, method, field"
+Date Range,Alternative,dDateRangeModel,DBConstants,dModel,Manage Reminder,v4,"P1, P3",1,1,0,field
+Date Range,Alternative,dDateRangeModel,ReminderContentProvider,dModel,Manage Reminder,v4,"P1, P3",1,1,4,method
+Date Range,Alternative,dDateRangeModel,DefaultReminderDAO,dModel,Manage Reminder,v4,P1,1,1,0,none
+Date Range,Alternative,dDateRangeFixedDateGUI,ReminderListFragment,dGUI,GUI,v3,P3,0,0,0,import
+Date Range,Alternative,dDateRangeFixedDateGUI,ReminderActivity,dGUI,GUI,v3,"P1, P3",1,1,3,method
+Date Range,Alternative,dDateRangeFixedDateUtil,Patterns,dModel,Manage Reminder,v3,P3,0,0,0,field
+Date Range,Alternative,dDateRangeGUI,ExternalAddReminderActivity,dCreateGUI,Create,v3,P1,2,2,0,none
+Date Range,Alternative,dDateRangeGUI,ReminderListFragment,dGUI,GUI,v3,P1,2,2,0,none
+Date Range,Alternative,dDateRangeGUI,ReminderActivity,dGUI,GUI,v3,"P1, P3",2,2,8,"field, method"
+Date Range,Alternative,dDateRangeGUI,ReminderArrayAdapter,dGUI,GUI,v3,"P1, P3",1,1,3,method
+Date Range,Alternative,dDateRangeGUI,ReminderAddActivity,dCreateGUI,Create,v3,"P1, P3",4,4,0,field
+Date Range,Alternative,dDateRangeGUI,EditReminderActivity,dEditGUI,Edit,v3,P1,1,1,0,none
+Date Range,Alternative,dDateRangeModel,Reminder,dModel,Manage Reminder,v3,"P1, P3",1,1,9,"import, method, field"
+Date Range,Alternative,dDateRangeModel,DBConstants,dModel,Manage Reminder,v3,"P1, P3",1,1,0,field
+Date Range,Alternative,dDateRangeModel,ReminderContentProvider,dModel,Manage Reminder,v3,"P1, P3",1,1,4,method
+Date Range,Alternative,dDateRangeModel,DefaultReminderDAO,dModel,Manage Reminder,v3,P1,1,1,0,none
+Fixed Date,Alternative,dFixedDateGUI,ExternalAddReminderActivity,dCreateGUI,Create,v3,P1,2,2,0,none
+Fixed Date,Alternative,dFixedDateGUI,ReminderListFragment,dGUI,GUI,v3,"P1, P3",3,3,0,import
+Fixed Date,Alternative,dFixedDateGUI,ReminderActivity,dGUI,GUI,v3,"P1, P3",3,3,8,"field, method"
+Fixed Date,Alternative,dFixedDateGUI,ReminderArrayAdapter,dGUI,GUI,v3,"P1, P3",1,1,3,"field, method"
+Fixed Date,Alternative,dFixedDateGUI,ReminderAddActivity,dCreateGUI,Create,v3,"P1, P3",4,4,0,field
+Fixed Date,Alternative,dFixedDateGUI,EditReminderActivity,dEditGUI,Edit,v3,P1,1,1,0,none
+Fixed Date,Alternative,dFixedDateModel,Reminder,dModel,Manage Reminder,v3,"P1, P3",1,1,5,"import, method, field"
+Fixed Date,Alternative,dFixedDateModel,DBConstants,dModel,Manage Reminder,v3,"P1, P3",1,1,0,field
+Fixed Date,Alternative,dFixedDateModel,ReminderContentProvider,dModel,Manage Reminder,v3,"P1, P3",1,1,2,method
+Fixed Date,Alternative,dFixedDateModel,DefaultReminderDAO,dModel,Manage Reminder,v3,P1,1,1,0,none
+Google Calendar,Optional,dGoogleCalendarGUI,ReminderActivity,dGUI,GUI,v3,"P1, P3",2,2,0,"field, import"
+Manage Category,Alternative,dManageCategoryController,Controller,dController,Manage Reminder,v3,P3,0,0,4,method
+Manage Category,Alternative,dManageCategoryGUI,AddReminderActivity,dCreateGUI,Create,v3,P2,1,1,0,none
+Manage Category,Alternative,dManageCategoryGUI,ExternalAddReminderActivity,dCreateGUI,Create,v3,"P1, P2, P3",2,4,1,"field, method"
+Manage Category,Alternative,dManageCategoryGUI,ReminderActivity,dGUI,GUI,v3,P2,0,2,0,none
+Manage Category,Alternative,dManageCategoryGUI,ReminderFilterArrayAdapter,dGUI,GUI,v3,"P2, P3",0,1,1,method
+Manage Category,Alternative,dManageCategoryGUI,EditReminderActivity,dEditGUI,Edit,v3,P2,0,1,0,none
+Manage Category,Alternative,dManageCategoryModel,ReminderContentProvider,dModel,Manage Reminder,v3,P1,1,1,0,none
+Priority,Optional,dPriorityGUI,ReminderFilterArrayAdapter,dGUI,GUI,v3,P2,0,2,0,none
+Priority,Optional,dPriorityGUI,EditReminderActivity,dEditGUI,Edit,v3,"P1, P3",1,1,0,import
+Priority,Optional,dPriorityGUI,ExternalAddReminderActivity,dCreateGUI,Create,v3,"P1, P3",2,2,0,import
+Priority,Optional,dPriorityGUI,ReminderArrayAdapter,dGUI,GUI,v3,"P1, P3",1,1,0,import
+Priority,Optional,dPriorityGUI,ReminderListFragment,dGUI,GUI,v3,P1,1,1,0,none
+Priority,Optional,dPriorityGUI,ReminderActivity,dGUI,GUI,v3,"P1, P3",3,3,2,"import, method, field"
+Priority,Optional,dPriorityGUI,ReminderAddActivity,dCreateGUI,Create,v3,"P1, P3",6,6,2,"import, method, field"
+Priority,Optional,dPriorityModel,DBConstants,dModel,Manage Reminder,v3,"P1, P3",1,1,0,field
+Priority,Optional,dPriorityModel,DefaultReminderDAO,dModel,Manage Reminder,v3,"P1, P3",1,1,0,import
+Priority,Optional,dPriorityModel,Reminder,dModel,Manage Reminder,v3,"P1, P3",1,1,2,"field, method"
+Priority,Optional,dPriorityReminder,ReminderMainActivity,dReminder,Manage Reminder,v3,"P2, P3",0,1,0,import
+Search,Optional,dSearchController,ReminderFilter,dController,Manage Reminder,v3,P3,0,0,1,method
+Search,Optional,dSearchGUI,ReminderListFragment,dGUI,GUI,v3,P3,0,0,1,method
+Search,Optional,dSearchReminder,ReminderMainActivity,dReminder,Manage Reminder,v3,"P2, P3",0,1,1,"import, method, field"
+Static Category,Alternative,dStaticCategoryController,Controller,dController,Manage Reminder,v3,P3,0,0,5,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,EditReminderActivity,dEditGUI,Edit,v3,"P1, P2, P3",1,2,2,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,AddReminderActivity,dCreateGUI,Create,v3,"P2, P3",0,1,1,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,ExternalAddReminderActivity,dCreateGUI,Create,v3,"P1, P3",2,2,3,"import, method, field"
+Static Category,Alternative,dStaticCategoryGUI,ReminderListFragment,dGUI,GUI,v3,P1,1,1,0,none
+Static Category,Alternative,dStaticCategoryGUI,ReminderActivity,dGUI,GUI,v3,"P1, P3",3,3,4,"import, method, field"
+Static Category,Alternative,dStaticCategoryGUI,ReminderAddActivity,dCreateGUI,Create,v3,"P1, P2, P3",5,6,3,"import, method, field"
+Static Category,Alternative,dStaticCategoryGUI,ReminderFilterArrayAdapter,dGUI,GUI,v3,P2,0,2,0,none
+Static Category,Alternative,dStaticCategoryPersistence,GenericDAO,dPersistence,Manage Reminder,v3,"P2, P3",0,1,0,import
+Static Category,Alternative,dStaticCategoryReminder,ReminderMainActivity,dReminder,Manage Reminder,v3,"P2, P3",0,1,0,import
+Static Category,Alternative,dStaticCategoryModel,DBConstants,dModel,Manage Reminder,v3,"P1, P2",1,1,0,none
+Static Category,Alternative,dStaticCategoryModel,ReminderContentProvider,dModel,Manage Reminder,v3,"P1, P2, P3",1,2,2,field
+Static Category,Alternative,dStaticCategoryModel,DBFactory,dModel,Manage Reminder,v3,P3,0,0,1,method
+Static Category,Alternative,dStaticCategoryModel,Reminder,dModel,Manage Reminder,v3,"P1, P3",1,1,2,"import, method, field"
+Static Category,Alternative,dStaticCategoryModel,ReminderDAO,dModel,Manage Reminder,v3,P3,0,0,1,"import, method"
+Static Category,Alternative,dStaticCategoryModel,DefaultDBFactory,dModel,Manage Reminder,v3,P3,0,0,1,method
+Static Category,Alternative,dStaticCategoryModel,DefaultReminderDAO,dModel,Manage Reminder,v3,"P1, P3",1,1,1,"import, method"
+Static Category,Alternative,dStaticCategoryModel,DBHelper,dModel,Manage Reminder,v3,P2,0,1,0,none
+Static Category,Alternative,dStaticCategoryGUI,EditReminderActivity,dEditGUI,Edit,v2,"P1, P2, P3",1,2,2,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,AddReminderActivity,dCreateGUI,Create,v2,"P1, P3",1,1,1,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,ExternalAddReminderActivity,dCreateGUI,Create,v2,"P1, P3",2,2,3,"import, method"
+Static Category,Alternative,dStaticCategoryGUI,ReminderListFragment,dGUI,GUI,v2,P1,1,1,0,none
+Static Category,Alternative,dStaticCategoryGUI,ReminderActivity,dGUI,GUI,v2,"P1, P3",3,3,4,"import, method, field"
+Static Category,Alternative,dStaticCategoryGUI,ReminderAddActivity,dCreateGUI,Create,v2,"P1, P2, P3",5,6,3,"import, method, field"
+Static Category,Alternative,dStaticCategoryGUI,ReminderFilterArrayAdapter,dGUI,GUI,v2,P2,0,2,0,none
+Static Category,Alternative,dStaticCategoryModel,DBConstants,dModel,Manage Reminder,v2,"P1, P2",1,1,0,none
+Static Category,Alternative,dStaticCategoryModel,ReminderContentProvider,dModel,Manage Reminder,v2,"P1, P2, P3",1,2,2,"import, method, field"
+Static Category,Alternative,dStaticCategoryModel,Reminder,dModel,Manage Reminder,v2,P3,0,0,1,"import, method, field"
+Static Category,Alternative,dStaticCategoryModel,ReminderDAO,dModel,Manage Reminder,v2,"P1, P3",1,1,2,"import, method"
+Static Category,Alternative,dStaticCategoryModel,DefaultDBFactory,dModel,Manage Reminder,v2,P3,0,0,1,method
+Static Category,Alternative,dStaticCategoryModel,DefaultReminderDAO,dModel,Manage Reminder,v2,P3,0,0,1,"import, method"
+Static Category,Alternative,dStaticCategoryModel,DBHelper,dModel,Manage Reminder,v2,P2,0,1,0,none
+Static Category,Alternative,dStaticCategoryPersistence,GenericDAO,dPersistence,Manage Reminder,v2,"P2, P3",0,1,0,import
+Static Category,Alternative,dStaticCategoryReminder,ReminderMainActivity,dReminder,Manage Reminder,v2,"P2, P3",0,1,0,import
+Manage Category,Alternative,dManageCategoryController,Controller,dController,Manage Reminder,v2,P3,0,0,4,method
+Manage Category,Alternative,dManageCategoryGUI,AddReminderActivity,dCreateGUI,Create,v2,P2,1,1,0,none
+Manage Category,Alternative,dManageCategoryGUI,ExternalAddReminderActivity,dCreateGUI,Create,v2,"P1, P2, P3",2,4,1,"field, method"
+Manage Category,Alternative,dManageCategoryGUI,ReminderActivity,dGUI,GUI,v2,P2,0,1,0,none
+Manage Category,Alternative,dManageCategoryGUI,ReminderFilterArrayAdapter,dGUI,GUI,v2,"P2, P3",0,1,1,method
+Manage Category,Alternative,dManageCategoryGUI,EditReminderActivity,dEditGUI,Edit,v2,P2,0,1,0,none
+Manage Category,Alternative,dManageCategoryModel,ReminderContentProvider,dModel,Manage Reminder,v2,P1,1,1,0,none

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Survey</title>
+    <title>Extracting and evolving delta-oriented product lines: An Experience Report</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style type="text/css">
@@ -42,10 +42,9 @@
                 <h2 class="text-center text-uppercase">
                     Extracting and evolving delta-oriented product lines: An Experience Report
                 </h2>
-                <p class="text-center">
-                    LEOMAR CAMARGO, KARINE GOMES, LEOPOLDO TEIXEIRA, GABRIEL LOBÃO, LUISA FANTIN, THIAGO FIGUEIREDO,
-                    RODRIGO
-                    BONIFÁCIO
+                <p class="text-center text-uppercase">
+                    Leomar Camargo, Karine Gomes, Rodrigo Bonifacio, Leopoldo Teixeira, Luísa Fantin, Gabriel Lobao and
+                    Thiago Figueiredo
                 </p>
             </div>
         </div>
@@ -87,12 +86,14 @@
         <div class="col-md-12">
             <h3 class="text-center">Case Studies</h3>
             <h5 class="font-weight-bold">Reminder-PL: </h5>
-           <figure>
-            <img src="img/reminder-fm-new.jpg" class="img-fluid mx-auto d-block" alt="Reminder-PL feature-model" title="Reminder-PL feature-model"/>
-            <figcaption class="text-center font-italic">
-                Reminder-PL feature-model. The red numbers represent the release in which the feature was implemented.
-            </figcaption>
-           </figure>
+            <figure>
+                <img src="img/reminder-fm-new.jpg" class="img-fluid mx-auto d-block" alt="Reminder-PL feature-model"
+                    title="Reminder-PL feature-model" />
+                <figcaption class="text-center font-italic">
+                    Reminder-PL feature-model. The red numbers represent the release in which the feature was
+                    implemented.
+                </figcaption>
+            </figure>
             <strong>GitHub project:</strong> <a
                 href="https://github.com/Reminder-App/reminder-dop">https://github.com/Reminder-App/reminder-dop</a>
         </div>
@@ -100,13 +101,115 @@
     <div class="row p-4">
         <div class="col-md-12">
             <h5 class="font-weight-bold">Iris-PL: </h5>
-           <figure>
-            <img src="img/iris-fm-new.jpg" class="img-fluid mx-auto d-block" alt="Iris-PL feature-model" title="Iris-PL feature-model"/>
-            <figcaption class="text-center font-italic">
-                Iris-PL feature-model. The red numbers represent the release in which the feature was implemented.
-            </figcaption>
-           </figure>
-            <strong>GitHub project:</strong> <a href="https://github.com/iris-email-client/iris-delta-programming">https://github.com/iris-email-client/iris-delta-programming</a>
+            <figure>
+                <img src="img/iris-fm-new.jpg" class="img-fluid mx-auto d-block" alt="Iris-PL feature-model"
+                    title="Iris-PL feature-model" />
+                <figcaption class="text-center font-italic">
+                    Iris-PL feature-model. The red numbers represent the release in which the feature was implemented.
+                </figcaption>
+            </figure>
+            <strong>GitHub project:</strong> <a
+                href="https://github.com/iris-email-client/iris-delta-programming">https://github.com/iris-email-client/iris-delta-programming</a>
+        </div>
+    </div>
+
+    <div class="row p-4">
+        <div class="col-md-12 text-justify">
+            <h3 class="text-center">Analysis</h3>
+            <ul>
+                <li>
+                    <strong>(RQ1)</strong> How to drive the evolution of delta-oriented software product lines using
+                    existing templates for safe and partially safe evolution of SPLs?
+                    <ul>
+                        <li>
+                            <a href="./datasets/safe-evolution/iris-pl.xlsx">Iris-PL excel file</a>
+                        </li>
+                        <li>
+                            <a href="./datasets/safe-evolution/reminder-pl.xlsx">Reminder-PL excel file</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>(RQ2)</strong> What patterns a development team might use to modularize feature interactions
+                    in delta-oriented SPLs?
+                    <ul>
+                        <li>
+                            <strong>Datasets:</strong>
+                            <ul>
+                                <li>
+                                    Iris-PL
+                                    <ul>
+                                        <li>
+                                            <a
+                                                href="./datasets/feature-interactions/complete-datasets/iris-dataset-type-a.csv">Features
+                                                Interactions type (a)</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./datasets/feature-interactions/iris-feature-interactions-type-a.csv">Features
+                                                Interactions type (a) resume</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./datasets/feature-interactions/iris-interactions-pattern-type-a.csv">Features
+                                                Interactions type (a) patterns</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./datasets/feature-interactions/complete-datasets/iris-dataset-type-b.csv">Features
+                                                Interactions type (b)</a>
+                                        </li>
+                                        <li>
+                                            <a href="./datasets/feature-interactions/iris-p3-type.csv"><i>ClassBodyDeclaration</i>
+                                                for P3 types</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Reminder-PL
+                                    <ul>
+                                        <li>
+                                            <a
+                                                href="./datasets/feature-interactions/complete-datasets/reminder-dataset-type-a.csv">Features
+                                                Interactions type (a)</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./datasets/feature-interactions/reminder-feature-interactions-type-a.csv">Features
+                                                Interactions type (a) resume</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./datasets/feature-interactions/reminder-interactions-pattern-type-a.csv">Features
+                                                Interactions type (a) patterns</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./datasets/feature-interactions/complete-datasets/iris-dataset-type-b.csv">Features
+                                                Interactions type (b)</a>
+                                        </li>
+                                        <li>
+                                            <a href="./datasets/feature-interactions/reminder-p3-type.csv"><i>ClassBodyDeclaration</i>
+                                                for P3 types</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>R analysis:</strong>
+                            <ul>
+                                <li>
+                                    <a href="./feature-interactions-analysis.html">HTML file</a>
+                                </li>
+                                <li>
+                                    <a href="/datasets/feature-interactions/instructions-paper-dop.Rmd">RMD file</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

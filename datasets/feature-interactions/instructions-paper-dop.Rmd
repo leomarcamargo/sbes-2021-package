@@ -1,0 +1,274 @@
+---
+title: "Feature Interaction analisys"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#install.packages("dplyr")
+#install.packages("ggplot2")
+#install.packages("scales")
+#install.packages("reshape2")
+#install.packages("likert")
+#install.packages("RColorBrewer")
+#install.packages("sqldf")
+#install.packages("RSQLite")
+
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(reshape2)
+library(likert)
+library(stringr)
+library(RColorBrewer)
+library(sqldf)
+```
+
+## Reminder datasets
+```{r}
+ReminderTypeA <- read.csv("../complete-datasets/reminder-dataset-type-a.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8") 
+
+ReminderTypeB <- read.csv("../complete-datasets/reminder-dataset-type-b.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8")
+
+ReminderInteractionsPatternTypeA <- read.csv("../reminder-interactions-pattern-type-a.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8")
+
+ReminderP3Types <- read.csv("../reminder-p3-type.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8")
+
+ReminderFeatureInteractionsTypeA <- read.csv("../reminder-feature-interactions-type-a.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8")
+
+ReminderFeatureInteractionsTypeA <- distinct(ReminderFeatureInteractionsTypeA)
+```
+
+
+## Iris datasets
+```{r}
+IrisTypeA <- read.csv("../complete-datasets/iris-dataset-type-a.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8")
+
+IrisTypeB <- read.csv("../complete-datasets/iris-dataset-type-b.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8")
+
+
+IrisInteractionsPatternTypeA <- read.csv("../iris-interactions-pattern-type-a.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8")
+
+IrisP3Types <- read.csv("../iris-p3-type.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8")
+
+IrisFeatureInteractionsTypeA <- read.csv("../iris-feature-interactions-type-a.csv",
+                    header = TRUE,
+                    quote="\"",
+                    sep=",",
+                    stringsAsFactors= TRUE,
+                    strip.white = TRUE,
+                    encoding = "UTF-8")
+
+IrisFeatureInteractionsTypeA <- distinct(IrisFeatureInteractionsTypeA)
+```
+
+
+## Reminder patterns
+```{r}
+
+ReminderPatternsFrequency <- sqldf("SELECT Release as Release, Pattern_Type as Pattern, Count(*) as Count FROM ReminderInteractionsPatternTypeA GROUP BY Pattern_Type, Release ORDER BY Release")
+show(ReminderPatternsFrequency)
+
+ReminderP3TypesFrequency <- sqldf("SELECT Release as Release, P3_Type as Type, Count(*) as Count FROM ReminderP3Types GROUP BY P3_Type, Release ORDER BY Release")
+show(ReminderPatternsFrequency)
+
+ReminderFeatureInteractionsTypeAResume <- sqldf("SELECT A1, group_concat(M1) M1, Release from ReminderFeatureInteractionsTypeA group by Release, A1", method = "raw")
+show(ReminderFeatureInteractionsTypeAResume)
+
+ReminderAmountInteractionsTypeAByModule <- sqldf("SELECT Delta1 as Delta, Count(*) as Count from ReminderTypeA GROUP BY Delta")
+show(ReminderAmountInteractionsTypeAByModule)
+
+ReminderMeanInteractionsTypeAByModule <- mean(ReminderAmountInteractionsTypeAByModule$Count)
+show(ReminderMeanInteractionsTypeAByModule)
+
+```
+
+
+## Iris patterns
+```{r}
+
+IrisPatternsFrequency <- sqldf("SELECT Release as Release, Pattern_Type as Pattern, Count(*) as Count FROM IrisInteractionsPatternTypeA GROUP BY Pattern_Type, Release ORDER BY Release")
+show(IrisPatternsFrequency)
+
+IrisP3TypesFrequency <- sqldf("SELECT Release as Release, P3_Type as Type, Count(*) as Count FROM IrisP3Types GROUP BY P3_Type, Release ORDER BY Release")
+show(IrisP3TypesFrequency)
+
+IrisFeatureInteractionsTypeAResume <- sqldf("SELECT A1, group_concat(M1) M1, Release from IrisFeatureInteractionsTypeA group by Release, A1", method = "raw")
+show(IrisFeatureInteractionsTypeAResume)
+
+IrisAmountInteractionsTypeAByModule <- sqldf("SELECT Delta1 as Delta, Count(*) as Count from IrisTypeA GROUP BY Delta")
+show(IrisAmountInteractionsTypeAByModule)
+
+IrisMeanInteractionsTypeAByModule <- mean(IrisAmountInteractionsTypeAByModule$Count)
+show(IrisMeanInteractionsTypeAByModule)
+```
+
+
+## Normalizing release names for patterns frequency
+```{r}
+PatternsFrequency <- merge (x = IrisPatternsFrequency, y = ReminderPatternsFrequency, all = TRUE)
+PatternsFrequency["SPL"] <- "Reminder-PL"
+PatternsFrequency[PatternsFrequency$Release == "v0.1.0", "SPL"] <- "Iris-PL"
+PatternsFrequency[PatternsFrequency$Release == "v0.1.1", "SPL"] <- "Iris-PL"
+PatternsFrequency[PatternsFrequency$Release == "v0.1.2", "SPL"] <- "Iris-PL"
+PatternsFrequency[PatternsFrequency$Release == "v0.1.3", "SPL"] <- "Iris-PL"
+PatternsFrequency[PatternsFrequency$Release == "v0.1.0", "Release"] <- "v1"
+PatternsFrequency[PatternsFrequency$Release == "v0.1.1", "Release"] <- "v2"
+PatternsFrequency[PatternsFrequency$Release == "v0.1.2", "Release"] <- "v3"
+PatternsFrequency[PatternsFrequency$Release == "v0.1.3", "Release"] <- "v4"
+```
+
+
+## Normalizing release names for P3 types Frequency
+```{r}
+P3TypesFrequency <- merge (x = IrisP3TypesFrequency, y = ReminderP3TypesFrequency, all = TRUE)
+P3TypesFrequency["SPL"] <- "Reminder-PL"
+P3TypesFrequency[P3TypesFrequency$Release == "v0.1.0", "SPL"] <- "Iris-PL"
+P3TypesFrequency[P3TypesFrequency$Release == "v0.1.1", "SPL"] <- "Iris-PL"
+P3TypesFrequency[P3TypesFrequency$Release == "v0.1.2", "SPL"] <- "Iris-PL"
+P3TypesFrequency[P3TypesFrequency$Release == "v0.1.3", "SPL"] <- "Iris-PL"
+P3TypesFrequency[P3TypesFrequency$Release == "v0.1.0", "Release"] <- "v1"
+P3TypesFrequency[P3TypesFrequency$Release == "v0.1.1", "Release"] <- "v2"
+P3TypesFrequency[P3TypesFrequency$Release == "v0.1.2", "Release"] <- "v3"
+P3TypesFrequency[P3TypesFrequency$Release == "v0.1.3", "Release"] <- "v4"
+```
+
+## FI type (a) plot
+```{r}
+RTypeAInteractionsDistinct <- sqldf("SELECT DISTINCT A1, M1, Release as Release FROM ReminderTypeA ORDER BY Release")
+RTypeAInteractions <- sqldf("SELECT DISTINCT A1, M1, Count(*) as Count, Release as Release FROM RTypeAInteractionsDistinct GROUP BY Release ORDER BY Release")
+
+ITypeAInteractionsDistinct <- sqldf("SELECT DISTINCT A1, M1, Release as Release FROM IrisTypeA ORDER BY Release")
+ITypeAInteractions <- sqldf("SELECT DISTINCT A1, M1,  Count(*) as Count, Release as Release FROM ITypeAInteractionsDistinct GROUP BY Release ORDER BY Release")
+
+TypeAInteractions <- merge (x = RTypeAInteractions, y = ITypeAInteractions, all = TRUE)
+
+TypeAInteractions["SPL"] <- "Reminder-PL"
+TypeAInteractions[TypeAInteractions$Release == "v0.1.0", "SPL"] <- "Iris-PL"
+TypeAInteractions[TypeAInteractions$Release == "v0.1.1", "SPL"] <- "Iris-PL"
+TypeAInteractions[TypeAInteractions$Release == "v0.1.2", "SPL"] <- "Iris-PL"
+TypeAInteractions[TypeAInteractions$Release == "v0.1.3", "SPL"] <- "Iris-PL"
+TypeAInteractions[TypeAInteractions$Release == "v0.1.0", "Release"] <- "v1"
+TypeAInteractions[TypeAInteractions$Release == "v0.1.1", "Release"] <- "v2"
+TypeAInteractions[TypeAInteractions$Release == "v0.1.2", "Release"] <- "v3"
+TypeAInteractions[TypeAInteractions$Release == "v0.1.3", "Release"] <- "v4"
+
+ggplot(data=TypeAInteractions, aes(x=Release, y=Count, fill=SPL)) + 
+  geom_bar(position = 'dodge', stat='identity') +
+  theme_light() + 
+  labs(y = "Interactions") +
+  geom_text(aes(label=Count), position=position_dodge(width=0.9), vjust=-0.25)
+```
+
+
+## Feature interactions type (b)
+```{r}
+
+RTypeBInteractionsDistinct <- sqldf("SELECT DISTINCT A1, A2, Release as Release FROM ReminderTypeB ORDER BY Release")
+RTypeBInteractions <- sqldf("SELECT DISTINCT A1, A2, Count(*) as Count, Release as Release FROM RTypeBInteractionsDistinct GROUP BY Release ORDER BY Release")
+
+ITypeBInteractionsDistinct <- sqldf("SELECT DISTINCT A1, A2, Release as Release FROM IrisTypeB ORDER BY Release")
+ITypeBInteractions <- sqldf("SELECT DISTINCT A1, A2, Count(*) as Count, Release as Release FROM ITypeBInteractionsDistinct GROUP BY Release ORDER BY Release")
+
+TypeBInteractions <- merge (x = RTypeBInteractions, y = ITypeBInteractions, all = TRUE)
+
+TypeBInteractions["SPL"] <- "Reminder-PL"
+TypeBInteractions[TypeBInteractions $Release == "v0.1.0", "SPL"] <- "Iris-PL"
+TypeBInteractions [TypeBInteractions $Release == "v0.1.1", "SPL"] <- "Iris-PL"
+TypeBInteractions [TypeBInteractions $Release == "v0.1.2", "SPL"] <- "Iris-PL"
+TypeBInteractions [TypeBInteractions $Release == "v0.1.3", "SPL"] <- "Iris-PL"
+TypeBInteractions [TypeBInteractions $Release == "v0.1.0", "Release"] <- "v1"
+TypeBInteractions [TypeBInteractions $Release == "v0.1.1", "Release"] <- "v2"
+TypeBInteractions [TypeBInteractions $Release == "v0.1.2", "Release"] <- "v3"
+TypeBInteractions [TypeBInteractions $Release == "v0.1.3", "Release"] <- "v4"
+
+ggplot(data=TypeBInteractions , aes(x=Release, y=Count, fill=SPL)) + 
+  geom_bar(position = 'dodge', stat='identity') +
+  theme_light() + 
+  labs(y = "Frequency") +
+  geom_text(aes(label=Count), position=position_dodge(width=0.9), vjust=-0.25)
+```
+
+
+## Patterns frequency plot
+```{r}
+ggplot(PatternsFrequency, aes(y = Count, x = Pattern)) + 
+  geom_bar(aes(fill = SPL), stat="identity", position='stack') + 
+  theme_light() + 
+  labs(y = "Frequency") +
+  facet_grid(~Release) +
+  geom_text(aes(x = Pattern, y = Count, label = Count, group = SPL), position = position_stack(vjust = .5))
+```
+
+
+## P3 types frequency plot
+```{r}
+ggplot(P3TypesFrequency, aes(y = Count, x = Type)) + 
+  geom_bar(aes(fill = SPL), stat="identity", position='stack') + 
+  theme_light() + 
+  facet_grid(~Release) +
+  labs(y = "Frequency") +
+  theme(legend.key.size = unit(1, "cm")) + 
+  geom_text(aes(x = Type, y = Count, label = Count, group = SPL), position = position_stack(vjust = .5))
+```
+
+```{r}
+ReminderTypeADistinct <- sqldf("SELECT DISTINCT A1, Delta1, Release FROM ReminderTypeA")
+show(ReminderTypeADistinct)
+
+ReminderTypeADistinctResume <- sqldf("SELECT DISTINCT A1, Count(*) as CountDeltas, Release FROM ReminderTypeADistinct GROUP BY A1, Release ORDER BY Release")
+show(ReminderTypeADistinctResume)
+```

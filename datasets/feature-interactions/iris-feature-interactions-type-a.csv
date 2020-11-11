@@ -1,0 +1,41 @@
+A1,M1,RELEASE
+Category,Persistence,v0.1.3
+Category,Services,v0.1.3
+Address Book,Services,v0.1.3
+Address Book,Services,v0.1.3
+Tag,Persistence,v0.1.3
+Advanced Search,Persistence,v0.1.3
+Search,Services,v0.1.3
+Simple Search,Persistence,v0.1.3
+Security,Services,v0.1.3
+Security,Services,v0.1.3
+Security,Services,v0.1.3
+Security,Services,v0.1.3
+Decrypt,Services,v0.1.3
+Encrypt,Services,v0.1.3
+Security,Services,v0.1.3
+Sign,Services,v0.1.3
+Verify,Services,v0.1.3
+Address Book,Services,v0.1.2
+Address Book,Services,v0.1.2
+Tag,Persistence,v0.1.2
+Advanced Search,Persistence,v0.1.2
+Search,Services,v0.1.2
+Simple Search,Persistence,v0.1.2
+Security,Services,v0.1.2
+Security,Services,v0.1.2
+Security,Services,v0.1.2
+Security,Services,v0.1.2
+Decrypt,Services,v0.1.2
+Encrypt,Services,v0.1.2
+Security,Services,v0.1.2
+Sign,Services,v0.1.2
+Verify,Services,v0.1.2
+Address Book,Services,v0.1.1
+Address Book,Services,v0.1.1
+Advanced Search,Persistence,v0.1.1
+Search,Services,v0.1.1
+Simple Search,Persistence,v0.1.1
+Address Book,Services,v0.1.0
+Address Book,Services,v0.1.0
+Tag,Services,v0.1.0
